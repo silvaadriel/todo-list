@@ -1,0 +1,41 @@
+.newTaskForm {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.newTaskForm input {
+  width: 100%;
+  background: var(--gray-500);
+  border: 1px solid var(--gray-700);
+  height: 3.375rem;
+  border-radius: 8px;
+  color: var(--gray-100);
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.newTaskForm button[type='submit'] {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 0;
+  background: var(--blue-dark);
+  color: var(--gray-100);
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.875rem;
+
+  transition: background-color 0.2s, filter 0.2s;
+}
+
+.newTaskForm button[type='submit']:disabled {
+  cursor: not-allowed;
+  background: var(--blue-dark);
+  filter: brightness(0.7);
+}
+
+.newTaskForm button[type='submit']:not(:disabled):hover {
+  background: var(--blue);
+}
